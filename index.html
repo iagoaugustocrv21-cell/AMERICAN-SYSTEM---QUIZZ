@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Check - Verify Restitutions</title>
+  <!-- META PIXEL: adicionar aqui -->
+  <!-- UTMIFY: adicionar aqui -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#fff",
+            blue: "#0a314d",
+            bluedark: "#062135",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+  </style>
+</head>
+
+<body class="bg-primary">
+  <header class="w-full bg-bluedark text-white">
+    <!-- Top Header -->
+    <div class="max-w-3xl mx-auto px-4 py-3">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <!-- Bandeira americana: substituir src se necessário -->
+          <div class="w-12 md:w-14 h-8 md:h-10 bg-blue border border-gray-600 flex items-center justify-center text-2xl md:text-3xl text-white rounded-sm">🇺🇸</div>
+          <div>
+            <p class="text-xs md:text-sm font-medium">Official Check</p>
+            <p class="text-xs text-gray-300">Verify if there are restitutions</p>
+          </div>
+        </div>
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-6">
+            <li><a href="#" class="text-sm hover:text-gray-300 transition-colors">Home</a></li>
+            <li><a href="#" class="text-sm hover:text-gray-300 transition-colors">About</a></li>
+            <li><a href="#" class="text-sm hover:text-gray-300 transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Main Headline -->
+    <div class="bg-blue w-full">
+      <div class="max-w-4xl mx-auto px-4 py-4 md:py-6">
+        <h1 class="text-center text-sm md:text-lg lg:text-xl text-white font-light leading-relaxed">
+          "Official check: verify if there are restitutions in your name — response in 10s"
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex flex-col items-center justify-center mx-auto w-full py-4 md:py-8">
+
+    <!-- STEP 1: Form -->
+    <div id="step1" class="max-w-2xl w-full px-4">
+      <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-4 md:p-8">
+
+        <!-- Steps Indicator -->
+        <div class="flex items-center justify-center mb-6 md:mb-8">
+          <div class="flex items-center justify-between relative w-full max-w-sm md:max-w-md">
+            <div class="absolute top-3 left-6 right-6 md:left-8 md:right-8 h-px bg-gray-300"></div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-blue text-white rounded-full flex items-center justify-center text-xs font-bold mb-1">1</div>
+              <span class="text-xs text-blue font-medium">Data</span>
+            </div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center text-xs font-bold mb-1">2</div>
+              <span class="text-xs text-gray-500 font-medium">Verify</span>
+            </div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center text-xs font-bold mb-1">3</div>
+              <span class="text-xs text-gray-500 font-medium">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="space-y-4 md:space-y-6">
+          <div>
+            <label for="fullName" class="block text-sm font-medium text-blue mb-2">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name"
+              class="w-full px-3 py-2.5 md:px-4 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+          </div>
+
+          <div>
+            <label for="state" class="block text-sm font-medium text-blue mb-2">State</label>
+            <select id="state" name="state" required
+              class="w-full px-3 py-2.5 md:px-4 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white">
+              <option value="">Select your state</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+              <option value="DC">District of Columbia</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="VI">U.S. Virgin Islands</option>
+              <option value="GU">Guam</option>
+              <option value="AS">American Samoa</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <!-- Custom State (hidden by default) -->
+          <div id="customStateDiv" class="hidden">
+            <label for="customState" class="block text-sm font-medium text-blue mb-2">Please specify your state/territory</label>
+            <input type="text" id="customState" name="customState" placeholder="Enter your state or territory"
+              class="w-full px-3 py-2.5 md:px-4 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+          </div>
+
+          <div class="flex items-start">
+            <input type="checkbox" id="authorization" required class="mt-1 h-4 w-4 border-gray-300 rounded flex-shrink-0 cursor-pointer">
+            <label for="authorization" class="ml-3 text-xs md:text-sm text-gray-700 leading-relaxed cursor-pointer">
+              I authorize verification in federal database.
+            </label>
+          </div>
+
+          <button id="verifyBtn" onclick="handleSubmit()"
+            class="w-full bg-blue hover:bg-bluedark text-white font-semibold py-3 md:py-4 px-4 md:px-6 text-sm md:text-base rounded-lg transition-colors duration-200 shadow-md cursor-pointer">
+            Verify Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Loading -->
+    <div id="step2" class="max-w-2xl w-full px-4 hidden">
+      <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-4 md:p-8 text-center">
+
+        <!-- Steps Indicator -->
+        <div class="flex items-center justify-center mb-6 md:mb-8">
+          <div class="flex items-center justify-between relative w-full max-w-sm md:max-w-md">
+            <div class="absolute top-3 left-6 right-6 md:left-8 md:right-8 h-px bg-gray-300"></div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold mb-1">✓</div>
+              <span class="text-xs text-green-600 font-medium">Data</span>
+            </div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-blue text-white rounded-full flex items-center justify-center text-xs font-bold mb-1" style="animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;">2</div>
+              <span class="text-xs text-blue font-medium">Verify</span>
+            </div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-gray-300 text-gray-500 rounded-full flex items-center justify-center text-xs font-bold mb-1">3</div>
+              <span class="text-xs text-gray-500 font-medium">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6 md:mb-8">
+          <div class="w-12 h-12 md:w-16 md:h-16 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4 md:mb-6" style="border-color: #0a314d; border-top-color: transparent; animation: spin 1s linear infinite;"></div>
+          <div id="loadingMessage" class="text-base md:text-lg font-medium text-blue">
+            Connecting to Federal Restitution System...
+          </div>
+        </div>
+        <div class="text-xs md:text-sm text-gray-600">
+          Please wait while we verify your information...
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: Result -->
+    <div id="step3" class="max-w-2xl w-full px-4 hidden">
+      <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-4 md:p-8 text-center">
+
+        <!-- Steps Indicator -->
+        <div class="flex items-center justify-center mb-6 md:mb-8">
+          <div class="flex items-center justify-between relative w-full max-w-sm md:max-w-md">
+            <div class="absolute top-3 left-6 right-6 md:left-8 md:right-8 h-px bg-gray-300"></div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold mb-1">✓</div>
+              <span class="text-xs text-green-600 font-medium">Data</span>
+            </div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold mb-1">✓</div>
+              <span class="text-xs text-green-600 font-medium">Verify</span>
+            </div>
+            <div class="flex flex-col items-center relative z-10">
+              <div class="w-5 h-5 md:w-6 md:h-6 bg-blue text-white rounded-full flex items-center justify-center text-xs font-bold mb-1">3</div>
+              <span class="text-xs text-blue font-medium">Result</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="mb-6 md:mb-8">
+          <h2 class="text-lg md:text-2xl font-bold text-blue mb-4 leading-tight">
+            Congratulations, <span id="userName"></span> — there are $2,350.00 available in your name.
+          </h2>
+          <div class="text-4xl md:text-6xl font-bold text-green-600 mb-4">$2,350.00</div>
+          <p class="text-xs md:text-sm text-gray-600 mb-2">
+            Source: Federal Restitution System — Record #: <span id="recordNumber"></span>
+          </p>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col items-center gap-4">
+          <a href="https://vsl.americansystem1.com/" id="ctaMain"
+            class="w-full bg-blue hover:bg-bluedark text-white font-semibold py-3 md:py-4 px-4 md:px-6 text-sm md:text-base rounded-lg transition-colors duration-200 shadow-md text-center">
+            Watch Official Video: How to Receive $2,350.00
+          </a>
+          <!-- Botão secundário bloqueado -->
+          <a href="#"
+            class="w-full bg-gray-300 text-gray-500 font-semibold py-3 md:py-4 px-4 md:px-6 text-sm md:text-base rounded-lg cursor-not-allowed text-center">
+            Download Instructions (PDF) - Watch video first
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 50% { opacity: .5; } }
+  </style>
+
+  <script>
+    // State select handler
+    document.getElementById('state').addEventListener('change', function() {
+      const div = document.getElementById('customStateDiv');
+      const input = document.getElementById('customState');
+      if (this.value === 'others') {
+        div.classList.remove('hidden');
+        input.required = true;
+      } else {
+        div.classList.add('hidden');
+        input.required = false;
+        input.value = '';
+      }
+    });
+
+    function generateRecordNumber() {
+      return 'FR-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+    }
+
+    const loadingMessages = [
+      'Connecting to Federal Restitution System...',
+      'Validating identity...',
+      'Generating personalized response...',
+    ];
+
+    function handleSubmit() {
+      const fullName = document.getElementById('fullName').value.trim();
+      const stateSelect = document.getElementById('state').value;
+      const customState = document.getElementById('customState').value.trim();
+      const authorization = document.getElementById('authorization').checked;
+
+      if (!fullName) { alert('Please enter your full name.'); return; }
+      if (!stateSelect) { alert('Please select your state.'); return; }
+      if (stateSelect === 'others' && !customState) { alert('Please specify your state.'); return; }
+      if (!authorization) { alert('Please authorize the verification.'); return; }
+
+      const state = stateSelect === 'others' ? customState : stateSelect;
+      const firstName = fullName.split(' ')[0];
+
+      localStorage.setItem('userFullName', fullName);
+      localStorage.setItem('userState', state);
+      localStorage.setItem('userFirstName', firstName);
+
+      document.getElementById('userName').textContent = firstName;
+      document.getElementById('recordNumber').textContent = generateRecordNumber();
+
+      // Passar fname, state e UTMs para a VSL via URL
+      const params = new URLSearchParams(window.location.search);
+      params.set('fname', firstName);
+      params.set('state', state);
+      const ctaLink = document.getElementById('ctaMain');
+      ctaLink.href = 'https://vsl.americansystem1.com/?' + params.toString();
+
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+
+      let idx = 0;
+      const el = document.getElementById('loadingMessage');
+      function next() {
+        el.textContent = loadingMessages[idx];
+        idx++;
+        if (idx < loadingMessages.length) {
+          setTimeout(next, 2000);
+        } else {
+          setTimeout(() => {
+            document.getElementById('step2').classList.add('hidden');
+            document.getElementById('step3').classList.remove('hidden');
+          }, 2000);
+        }
+      }
+      next();
+    }
+  </script>
+</body>
+</html>
